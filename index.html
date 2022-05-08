@@ -2,12 +2,53 @@
 <html>
 <head>
 <title>血染钟楼</title>
+<style>
+    .button {
+      background-color: #ff6347;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    #divActivites{
+        margin: 20px auto;
+        width: 600px;
+        text-align: center;
+        border-width: 4px;
+        border-color: #ff6347;
+    }
+    #inActivities{
+        width: 600px;
+        height: 400px;
+        margin-left: 0px;
+        text-align: center;
+        border-width: 4px;
+        border-color: #ff6347;
+    }     
+    </style>
 </head>
-<body>
-
-<h1>血染钟楼</h1>
+<body style="text-align: center;">
+<h1 style="color:#ff6347;">血染钟楼</h1>
 <h2>甄嬛传</h2>
-<p>This is a paragraph.</p>
+<button class="button" onclick="lottoMax();">角色生成</button>
+<div id="divActivites" name="divActivites" >
+</div> 
 
+<script>
+    function lottoMax() {
+      var num = Math.random() * 14; 
+      var namelist = ["甄嬛","皇上","华妃","皇后","安陵容","回魂太上皇","褀贵人","苏培盛","舒太妃","沈眉庄","曹琴默","妙音娘子","作者","莫言"];
+      var num_1 = parseInt(num);
+      var name = namelist[num_1];
+      document.getElementById("divActivites").innerHTML = name;
+      
+      
+    }
+    </script>
 </body>
 </html>
